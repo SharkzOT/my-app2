@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Instagram OAuth</title>
+</head>
+<body>
+    <a href="https://api.instagram.com/oauth/authorize?client_id=3650595555179078&redirect_uri=https://SharkzOT.github.io/my-app2&scope=user_profile,user_media&response_type=code">Connect with Instagram</a>
+
+    <!-- Load the JavaScript SDK -->
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId      : '3650595555179078',
+          cookie     : true,
+          xfbml      : true,
+          version    : 'v10.0'
+        });
+
+        FB.AppEvents.logPageView();   
+
+      };
+
+      (function(d, s, id){
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement(s); js.id = id;
+         js.src = "https://connect.facebook.net/en_US/sdk.js";
+         fjs.parentNode.insertBefore(js, fjs);
+       }(document, 'script', 'facebook-jssdk'));
+    </script>
+</body>
+</html>
